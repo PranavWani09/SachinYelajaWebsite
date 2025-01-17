@@ -81,17 +81,17 @@ function HomePage() {
           <div className="row">
             <div className="col-md-4">
               <div className="testimonial-card">
-                <p>"Sachin Yelaja's services have been invaluable to me. Their advice is spot-on, and I always feel confident with my decisions." - Client 1</p>
+                <p>"Sachin Yelaja's services have been invaluable to me. Their advice is spot-on, and I always feel confident with my decisions."</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="testimonial-card">
-                <p>"The team is highly knowledgeable and guided me through the entire process with utmost professionalism." - Client 2</p>
+                <p>"The team is highly knowledgeable and guided me through the entire process with utmost professionalism."</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="testimonial-card">
-                <p>"I trust them completely with my GIC needs. Their personalized service is unmatched!" - Client 3</p>
+                <p>"I trust them completely with my GIC needs. Their personalized service is unmatched!"</p>
               </div>
             </div>
           </div>
