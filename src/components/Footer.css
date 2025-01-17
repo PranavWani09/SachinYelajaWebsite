@@ -1,0 +1,48 @@
+/* Footer Section */
+.footer {
+    background-color: #333333; /* Darker background color for better contrast */
+    text-align: center;
+    padding: 40px 20px;  /* More padding for a spacious look */
+    color: #f1f1f1; /* Lighter text color for readability */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .footer a {
+    color: #f1f1f1; /* Same color for links to keep the theme consistent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #00bcd4;  /* A bright color to make links stand out when hovered */
+  }
+  
+  /* Social Media Icons (if applicable) */
+  .footer .social-icons a {
+    margin: 0 15px;
+    font-size: 20px;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #00bcd4;  /* Hover effect for social media icons */
+  }
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    color: #25D366;  /* WhatsApp green color */
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #128C7E;  /* Darker green on hover */
+  }
+  

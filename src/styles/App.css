@@ -1,0 +1,78 @@
+/* Global Styles */
+
+/* Custom Navbar */
+.navbar-light {
+  background-color: #555555 !important;
+}
+
+.navbar-light .navbar-nav {
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+  width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  text-align: center;
+}
+
+.navbar-light .navbar-brand {
+  color: #e0e0e0 !important;
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #cccccc !important;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 0;
+  color: white;
+}
+
+.hero .btn {
+  background-color: #808080;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #666666;
+  transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer {
+  background-color: #555555;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #666666;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Styling */
+.bg-custom {
+  background-color: #555555 !important;
+}
+
+.text-grey {
+  color: #e0e0e0 !important;
+}
