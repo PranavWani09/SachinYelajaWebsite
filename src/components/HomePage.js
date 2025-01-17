@@ -8,7 +8,7 @@ function HomePage() {
       {/* Hero Section */}
       <section className="hero bg-custom text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Welcome to Sachin Yelaja</h1>
+          <h1 className="display-4">Expert GIC Solutions by Sachin Yelaja</h1>
           <p className="lead">Your trusted GIC Consultant for all your needs</p>
         </div>
       </section>
