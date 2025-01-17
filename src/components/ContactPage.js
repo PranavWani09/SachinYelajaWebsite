@@ -1,71 +1,40 @@
-import React, { useState } from "react";
+import React from 'react';
 
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
-
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // CORS Proxy URL
-    const apiUrl = "https://script.google.com/macros/s/AKfycbyFEtV7HZuoUqE8pTiqIMvc9CNziDsktUZWuCeNUQXx5pyUzQMHi191ds473Bord9ZP/exec"; // Your Google Apps Script URL
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("phone", formData.phone);
-    formDataToSend.append("message", formData.message);
-
-    fetch(proxyUrl + apiUrl, {
-      method: "POST", // Using POST method
-      body: formDataToSend,
-    })
-      .then((response) => response.text()) // or response.json() depending on your expected response type
-      .then((data) => {
-        console.log("Success:", data); // Success message from the API
-        alert("Form submitted successfully!");
-      })
-      .catch((error) => {
-        console.error("Error:", error); // Catch and log any errors
-        alert("There was an error submitting the form.");
-      });
-  };
-
+function ContactPage() {
   return (
     <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-        </label>
-        <label>
-          Email:
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        </label>
-        <label>
-          Phone:
-          <input type="text" name="phone" value={formData.phone} onChange={handleChange} required />
-        </label>
-        <label>
-          Message:
-          <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+      <section id="contact" className="py-5 bg-custom text-white">
+        <div className="container">
+          <h2 className="text-center mb-4">Contact Us</h2>
+          <form>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">Full Name</label>
+                  <input type="text" className="form-control" placeholder='Enter your fullname' id="name" required />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">Email</label>
+                  <input type="email" className="form-control" placeholder='Enter your email' id="email" required />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="mobile" className="form-label">Phone Number</label>
+                  <input type="tel" className="form-control" placeholder='Enter your phone number'  id="mobile" required />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="mb-3">
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea className="form-control" placeholder='Enter your message' id="message" rows="5" required></textarea>
+                </div>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-light">Send Message</button>
+          </form>
+        </div>
+      </section>
     </div>
   );
-};
+}
 
 export default ContactPage;
