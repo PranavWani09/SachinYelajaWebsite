@@ -11,17 +11,17 @@ function ContactPage() {
               <div className="col-md-6">
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Full Name</label>
-                  <input type="text" className="form-control" id="name" required />
+                  <input type="text" className="form-control" placeholder='Enter your fullname' id="name" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" required />
+                  <input type="email" className="form-control" placeholder='Enter your email' id="email" required />
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="mb-3">
                   <label htmlFor="message" className="form-label">Message</label>
-                  <textarea className="form-control" id="message" rows="5" required></textarea>
+                  <textarea className="form-control" placeholder='Enter your message' id="message" rows="5" required></textarea>
                 </div>
               </div>
             </div>
