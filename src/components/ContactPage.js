@@ -1,126 +1,71 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function ContactPage() {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission
 
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value,
-    };
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // CORS Proxy URL
+    const apiUrl = "https://script.google.com/macros/s/AKfycbyFEtV7HZuoUqE8pTiqIMvc9CNziDsktUZWuCeNUQXx5pyUzQMHi191ds473Bord9ZP/exec"; // Your Google Apps Script URL
 
-    const googleFormURL = "https://script.google.com/macros/s/AKfycbyFEtV7HZuoUqE8pTiqIMvc9CNziDsktUZWuCeNUQXx5pyUzQMHi191ds473Bord9ZP/exec";
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("message", formData.message);
 
-    const params = new URLSearchParams();
-    params.append("entry.2005620554", formData.name);
-    params.append("entry.1045781291", formData.email);
-    params.append("entry.1166974658", formData.phone);
-    params.append("entry.839337160", formData.message);
-
-    try {
-      const response = await fetch(googleFormURL, {
-        method: "POST",
-        body: params,
+    fetch(proxyUrl + apiUrl, {
+      method: "POST", // Using POST method
+      body: formDataToSend,
+    })
+      .then((response) => response.text()) // or response.json() depending on your expected response type
+      .then((data) => {
+        console.log("Success:", data); // Success message from the API
+        alert("Form submitted successfully!");
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Catch and log any errors
+        alert("There was an error submitting the form.");
       });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send message!");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the message.");
-    }
   };
 
   return (
     <div>
-      <section id="contact" className="py-5 bg-custom text-white">
-        <div className="container">
-          <h2 className="text-center mb-4">Contact Us</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Full Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="phone" className="form-label">Phone Number</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label">Message</label>
-                  <textarea
-                    className="form-control"
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-            <button type="submit" className="btn btn-light">Send Message</button>
-          </form>
-        </div>
-      </section>
+      <h1>Contact Us</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        </label>
+        <label>
+          Phone:
+          <input type="text" name="phone" value={formData.phone} onChange={handleChange} required />
+        </label>
+        <label>
+          Message:
+          <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
-}
+};
 
 export default ContactPage;
