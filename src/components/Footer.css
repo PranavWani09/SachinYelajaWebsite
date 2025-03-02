@@ -1,9 +1,9 @@
-/* Footer Section */
+
 .footer {
-    background-color: #333333; /* Darker background color for better contrast */
+    background-color: #333333; 
     text-align: center;
-    padding: 40px 20px;  /* More padding for a spacious look */
-    color: #f1f1f1; /* Lighter text color for readability */
+    padding: 40px 20px; 
+    color: #f1f1f1; 
   }
   
   .footer p {
@@ -12,16 +12,16 @@
   }
   
   .footer a {
-    color: #f1f1f1; /* Same color for links to keep the theme consistent */
+    color: #f1f1f1; 
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .footer a:hover {
-    color: #00bcd4;  /* A bright color to make links stand out when hovered */
+    color: #00bcd4;  
   }
   
-  /* Social Media Icons (if applicable) */
+
   .footer .social-icons a {
     margin: 0 15px;
     font-size: 20px;
@@ -30,19 +30,19 @@
   }
   
   .footer .social-icons a:hover {
-    color: #00bcd4;  /* Hover effect for social media icons */
+    color: #00bcd4;  
   }
   .social-icons {
     margin-top: 10px;
   }
   
   .social-icon {
-    color: #25D366;  /* WhatsApp green color */
+    color: #25D366;  
     margin: 0 10px;
     text-decoration: none;
   }
   
   .social-icon:hover {
-    color: #128C7E;  /* Darker green on hover */
+    color: #128C7E;
   }
   

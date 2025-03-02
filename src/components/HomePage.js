@@ -5,7 +5,6 @@ import './HomePage.css';
 function HomePage() {
   return (
     <div>
-      {/* Hero Section */}
       <section className="hero bg-custom text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">Expert GIC Solutions by Sachin Yelaja</h1>
@@ -13,7 +12,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-5">
         <div className="container">
           <div className="row align-items-center">
@@ -33,7 +31,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
       <div>
       <section className="py-5 bg-light">
         <div className="container">
@@ -74,7 +71,6 @@ function HomePage() {
       </section>
     </div>
 
-      {/* Testimonials Section */}
       <section id="testimonials" className="py-5">
         <div className="container">
           <h2 className="text-center mb-4">What Our Clients Say</h2>
@@ -98,7 +94,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
       <section id="cta" className="bg-custom text-white py-5">
         <div className="container text-center">
           <h2>Ready to take the next step?</h2>

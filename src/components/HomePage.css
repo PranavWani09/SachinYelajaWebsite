@@ -1,14 +1,14 @@
-/* Hero Section */
+
 .hero {
-  background-color: #2c3e50;  /* Darker background */
+  background-color: #2c3e50;  
   padding: 100px 0;
   text-align: center;
   color: white;
 }
 
-/* About Section */
+
 #about {
-  background-color: #f9f9f9;  /* Light background for better contrast */
+  background-color: #f9f9f9;  
   padding: 50px 0;
 }
 
@@ -21,7 +21,7 @@
 }
 
 #about .col-md-6 {
-  text-align: center; /* Center text for better readability */
+  text-align: center; 
 }
 
 #about .img-fluid {
@@ -31,7 +31,7 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Add margin at the bottom for mobile responsiveness */
+
 #about .col-md-6.mb-4 {
   margin-bottom: 20px;
 }
@@ -42,25 +42,25 @@
   color: #333;
 }
 
-/* For mobile responsiveness */
+
 @media (max-width: 768px) {
   #about .col-md-6 {
     text-align: center;
   }
 
   #about .col-md-6 img {
-    width: 100%; /* Ensure the image takes full width on mobile */
+    width: 100%; 
     margin-top: 20px;
   }
 }
 
-/* Services Section */
+
 #services .card-img-top {
   height: 200px;
   object-fit: cover;
 }
 
-/* Testimonials Section */
+
 .testimonial-card {
   background-color: #f9f9f9;
   padding: 20px;
@@ -70,7 +70,7 @@
   margin-bottom: 20px;
 }
 
-/* Call to Action Section */
+
 #cta {
   background-color: #2c3e50;
   color: white;
@@ -90,7 +90,6 @@
   background-color: #e67e22;
 }
 
-/* Custom Styles for Services Page */
 
 .card {
   height: 100%;
@@ -99,10 +98,10 @@
 }
 
 .card-img-top {
-  max-height: 200px;  /* You can adjust the height as needed */
-  object-fit: contain;  /* Ensures the image retains its aspect ratio */
-  width: 100%;  /* Makes the image responsive */
-  margin: 0 auto;  /* Centers the image horizontally */
+  max-height: 200px; 
+  object-fit: contain; 
+  width: 100%; 
+  margin: 0 auto;  
 }
 
 .card-body {  
@@ -111,12 +110,12 @@
 
 
 .card:hover {
-  transform: translateY(-10px);  /* Card hover effect */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);  /* Slight shadow on hover */
+  transform: translateY(-10px);  
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .card-title {
-  font-size: 1.2rem;  /* Adjust the font size */
+  font-size: 1.2rem; 
   font-weight: bold;
 }
 
@@ -124,7 +123,6 @@
   font-size: 1rem;
 }
 
-/* Flexbox to align columns */
 .row-cols-1 {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +138,6 @@
 
 .col {
   flex: 1;
-  min-width: 280px;  /* Ensure the cards don't get too small */
+  min-width: 280px; 
   margin-bottom: 20px;
 }
